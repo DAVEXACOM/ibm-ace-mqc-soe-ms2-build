@@ -1,6 +1,7 @@
-﻿FROM davexacom/ace11002mqc91soe:latest
+#﻿FROM davexacom/ace11002mqc91soe:latest
+FROM image-registry.openshift-image-registry.svc:5000/da-mq/ace11002mqc91soe
 # if using with Buildah in Tekton the ENV won't work
-#ENV BAR1=Microservice2.bar
+ENV BAR1=Microservice2.bar
 
 # Copy in the bar file to a temporary directory
 #COPY --chown=aceuser ./acesoe/binary/$BAR1 /tmp
